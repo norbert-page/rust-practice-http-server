@@ -1,0 +1,18 @@
+[package]
+name = "server"
+description = "Rudimentary, practice HTTP server and ThreadPool implementations."
+version = "0.1.0"
+edition = "2021"
+authors = ["Norbert"]
+publish = false     # prevent accidental publishing
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+# Explicitly specified name to avoid same-name `cargo doc` conflict
+[lib]
+name = "threadpool"
+path = "src/lib.rs"
+
+[dependencies]
