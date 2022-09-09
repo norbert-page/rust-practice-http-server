@@ -25,10 +25,11 @@ fn main() {
     const SEQUENTIAL_CONNECTIONS_LIMIT: usize = 3; // cumulative number of connection attempts after which server shutdowns (to test shutdown)
     const THREAD_POOL_SIZE: usize = 4; // number of threads in a thread-pool
 
-    // not self-evident, but this will also listen on Ipv4
+    // not self-evident, but this will try to listen on both Ipv6 and Ipv4
+    // if ipv6 is unavailable, this will listen on ipv4 only (tested on Debian)
     let all_addrs: SocketAddr = (Ipv6Addr::UNSPECIFIED, PORT).into();
-
-    // bind to the socket
+ 
+    // bind to the socket, panic if unsuccessful
     let listener = TcpListener::bind(all_addrs).unwrap();
 
     // create a pool with a given number of threads

@@ -1,10 +1,10 @@
 [package]
-name = "server"
+name = "rust-practice-http-server"
 description = "Rudimentary, practice HTTP server and ThreadPool implementations."
 version = "0.1.0"
 edition = "2021"
 authors = ["Norbert"]
-publish = false     # prevent accidental publishing
+publish = false     # prevent accidental publishing to crate repository
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
